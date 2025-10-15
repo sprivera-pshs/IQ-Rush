@@ -1,0 +1,405 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="CS_ProjectProposal_GroupIDK"/>
+        <attribute name="authors" value="Student"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-13 03:22:49 PM"/>
+        <attribute name="created" value="U3R1ZGVudDtERVNLVE9QLU5OSkdENEo7MjAyNS0xMC0wODsxMTowOTozOCBBTTszMDkw"/>
+        <attribute name="edited" value="U3R1ZGVudDtERVNLVE9QLU5OSkdENEo7MjAyNS0xMC0wODsxMTozODowNSBBTTsxOzMxOTQ="/>
+        <attribute name="edited" value="eWFlbDtNT0lSQUg7MjAyNS0xMC0xMjswNjowMzoyNSBQTTszOzIyNTg="/>
+        <attribute name="edited" value="U2hpbWlyYSBSaXZlcmE7TEFQVE9QLVFONk5JSjMxOzIwMjUtMTAtMTM7MDM6MjI6NDkgUE07MTszNzk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="userName, bestSubject, secondBestSubject, worstSubject, leaderboardOption, tiedBestSubject, tiedWorstSubject" type="String" array="False" size=""/>
+            <declare name="gameIteration, englishOption, mathOption, scienceOption, notDone, done" type="Boolean" array="False" size=""/>
+            <declare name="subjectOption, englishScore, mathScore, scienceScore, bestScore, secondBestScore, worstScore, tiedBestScore, tiedWorstScore" type="Integer" array="False" size=""/>
+            <output expression="&quot;Hello! Welcome to our game, uh... What's your name again?&quot;" newline="True"/>
+            <input variable="userName"/>
+            <output expression="&quot;Ohh! right, right.. Anyway, welcome to our game, &quot; &amp; userName &amp; &quot;. In this game, we can help you review your subjects, so that you won't have to struggle anymore! (I hope) :)&quot;" newline="True"/>
+            <output expression="&quot;Anyway, we are IQX, here to present.. IQ Rush!&quot;" newline="True"/>
+            <output expression="&quot;...&quot;" newline="True"/>
+            <assign variable="notDone" expression="False"/>
+            <assign variable="done" expression="True"/>
+            <assign variable="englishOption" expression="False"/>
+            <assign variable="mathOption" expression="False"/>
+            <assign variable="scienceOption" expression="False"/>
+            <assign variable="gameIteration" expression="False"/>
+            <while expression="gameIteration == False">
+                <output expression="&quot;Let's just start.. What subject would you like to review? (Options : Input 1 for English, 2 for Math, 3 for Science &amp; 4 If you are done. (Only choose 4. if you are done with all of it!!)) :&quot;" newline="True"/>
+                <input variable="subjectOption"/>
+                <if expression="(subjectOption ==  1) and (englishOption == notDone)">
+                    <then>
+                        <call expression="englishQuiz"/>
+                        <assign variable="englishScore" expression="englishQuiz()"/>
+                        <output expression="englishScore" newline="True"/>
+                        <assign variable="englishOption" expression="done"/>
+                    </then>
+                    <else>
+                        <if expression="(subjectOption == 2) and (mathOption == notDone)">
+                            <then>
+                                <call expression="mathQuiz"/>
+                                <assign variable="mathScore" expression="mathQuiz()"/>
+                                <output expression="mathScore" newline="True"/>
+                                <assign variable="mathOption" expression="done"/>
+                            </then>
+                            <else>
+                                <if expression="(subjectOption == 3) and (scienceOption == notDone)">
+                                    <then>
+                                        <call expression="scienceQuiz()"/>
+                                        <assign variable="scienceScore" expression="scienceQuiz()"/>
+                                        <output expression="scienceScore" newline="True"/>
+                                        <assign variable="scienceOption" expression="done"/>
+                                    </then>
+                                    <else>
+                                        <if expression="(subjectOption == 4) and (mathOption == done) and (englishOption == done) and (scienceOption == done)">
+                                            <then>
+                                                <assign variable="gameIteration" expression="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Hm.. I think you spelt it wrong, typed in a different subject from the options or the subject you chose was already chosen before.&quot;" newline="True"/>
+                                                <output expression="&quot;Please try again, thank you! ^^&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <if expression="(englishScore &gt; mathScore) and (englishScore &gt; scienceScore)">
+                <then>
+                    <assign variable="bestScore" expression="englishScore"/>
+                    <assign variable="bestSubject" expression="&quot;English&quot;"/>
+                    <if expression="mathScore &gt; scienceScore">
+                        <then>
+                            <assign variable="secondBestScore" expression="mathScore"/>
+                            <assign variable="worstScore" expression="scienceScore"/>
+                            <assign variable="secondBestSubject" expression="&quot;Math&quot;"/>
+                            <assign variable="worstSubject" expression="&quot;Science&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="scienceScore &gt; mathScore">
+                                <then>
+                                    <assign variable="secondBestScore" expression="scienceScore"/>
+                                    <assign variable="worstScore" expression="mathScore"/>
+                                    <assign variable="secondBestSubject" expression="&quot;Science&quot;"/>
+                                    <assign variable="worstSubject" expression="&quot;Math&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="tiedWorstSubject" expression="&quot;Science&quot;"/>
+                                    <assign variable="tiedWorstSubject" expression="&quot;Math&quot;"/>
+                                    <assign variable="tiedWorstScore" expression="scienceScore"/>
+                                    <assign variable="tiedWorstScore" expression="mathScore"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="(mathScore &gt; englishScore) and (mathScore &gt; scienceScore)">
+                        <then>
+                            <assign variable="bestScore" expression="mathScore"/>
+                            <assign variable="bestSubject" expression="&quot;Math&quot;"/>
+                            <if expression="englishScore &gt; scienceScore">
+                                <then>
+                                    <assign variable="secondBestScore" expression="englishScore"/>
+                                    <assign variable="worstScore" expression="scienceScore"/>
+                                    <assign variable="secondBestSubject" expression="&quot;English&quot;"/>
+                                    <assign variable="worstSubject" expression="&quot;Science&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="scienceScore &gt; englishScore">
+                                        <then>
+                                            <assign variable="secondBestScore" expression="scienceScore"/>
+                                            <assign variable="worstScore" expression="englishScore"/>
+                                            <assign variable="secondBestSubject" expression="&quot;Science&quot;"/>
+                                            <assign variable="worstSubject" expression="&quot;English&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="tiedWorstScore" expression="scienceScore"/>
+                                            <assign variable="tiedWorstScore" expression="englishScore"/>
+                                            <assign variable="tiedWorstSubject" expression="&quot;Science&quot;"/>
+                                            <assign variable="tiedWorstSubject" expression="&quot;English&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="(scienceScore &gt; englishScore) and (scienceScore &gt; mathScore)">
+                                <then>
+                                    <assign variable="bestScore" expression="scienceScore"/>
+                                    <assign variable="bestSubject" expression="&quot;Science&quot;"/>
+                                    <if expression="mathScore &gt; englishScore">
+                                        <then>
+                                            <assign variable="secondBestSubject" expression="&quot;Math&quot;"/>
+                                            <assign variable="worstSubject" expression="&quot;English&quot;"/>
+                                            <assign variable="secondBestScore" expression="mathScore"/>
+                                            <assign variable="worstScore" expression="englishScore"/>
+                                        </then>
+                                        <else>
+                                            <if expression="englishScore &gt; mathScore">
+                                                <then>
+                                                    <assign variable="secondBestSubject" expression="&quot;Math&quot;"/>
+                                                    <assign variable="worstSubject" expression="&quot;English&quot;"/>
+                                                    <assign variable="secondBestScore" expression="mathScore"/>
+                                                    <assign variable="worstScore" expression="englishScore"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="tiedWorstSubject" expression="&quot;Math&quot;"/>
+                                                    <assign variable="tiedWorstSubject" expression="&quot;English&quot;"/>
+                                                    <assign variable="tiedWorstScore" expression="mathScore"/>
+                                                    <assign variable="tiedWorstScore" expression="englishScore"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="englishScore == mathScore">
+                                        <then>
+                                            <if expression="englishScore == scienceScore">
+                                                <then>
+                                                    <assign variable="tiedBestSubject" expression="&quot;Math&quot;"/>
+                                                    <assign variable="tiedBestSubject" expression="&quot;English&quot;"/>
+                                                    <assign variable="tiedBestSubject" expression="&quot;Science&quot;"/>
+                                                    <assign variable="tiedBestScore" expression="mathScore"/>
+                                                    <assign variable="tiedBestScore" expression="englishScore"/>
+                                                    <assign variable="tiedBestScore" expression="scienceScore"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="tiedBestSubject" expression="&quot;Math&quot;"/>
+                                                    <assign variable="tiedBestSubject" expression="&quot;English&quot;"/>
+                                                    <assign variable="worstSubject" expression="&quot;Science&quot;"/>
+                                                    <assign variable="tiedBestScore" expression="mathScore"/>
+                                                    <assign variable="tiedBestScore" expression="englishScore"/>
+                                                    <assign variable="worstScore" expression="scienceScore"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="englishScore == scienceScore">
+                                                <then>
+                                                    <assign variable="tiedBestSubject" expression="&quot;Science&quot;"/>
+                                                    <assign variable="tiedBestSubject" expression="&quot;English&quot;"/>
+                                                    <assign variable="worstSubject" expression="&quot;Math&quot;"/>
+                                                    <assign variable="tiedBestScore" expression="scienceScore"/>
+                                                    <assign variable="tiedBestScore" expression="englishScore"/>
+                                                    <assign variable="worstScore" expression="mathScore"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="tiedBestSubject" expression="&quot;Science&quot;"/>
+                                                    <assign variable="tiedBestSubject" expression="&quot;Math&quot;"/>
+                                                    <assign variable="worstSubject" expression="&quot;English&quot;"/>
+                                                    <assign variable="tiedBestScore" expression="scienceScore"/>
+                                                    <assign variable="tiedBestScore" expression="mathScore"/>
+                                                    <assign variable="worstScore" expression="englishScore"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Looks like you've already finished the quiz! Would you like to see the leaderboard? (Yes or No):&quot;" newline="True"/>
+            <input variable="leaderboardOption"/>
+            <call expression="leaderboard(bestSubject, secondBestSubject, worstSubject, worstScore, secondBestScore, bestScore, leaderboardOption, tiedBestSubject, tiedBestScore, tiedWorstScore, tiedWorstSubject)"/>
+        </body>
+    </function>
+    <function name="englishQuiz" type="Integer" variable="englishScore">
+        <parameters/>
+        <body>
+            <declare name="englishScore" type="Integer" array="False" size=""/>
+            <declare name="asnwer1, answer2, answer3" type="String" array="False" size=""/>
+            <assign variable="englishScore" expression="0"/>
+            <output expression="&quot;Ooh! English, I love this one!&quot;" newline="True"/>
+            <output expression="&quot;~~~Make sure to answer with only CAPITAL letters!!~~~&quot;" newline="True"/>
+            <output expression="&quot;First question, What are at least 3 elements of a short story?&quot;" newline="True"/>
+            <output expression="&quot;A. Theme, Setting, Characters&quot;" newline="True"/>
+            <output expression="&quot;B. Plot, Conflict, Laptop&quot;" newline="True"/>
+            <output expression="&quot;C. Author, Title, Page Number&quot;" newline="True"/>
+            <output expression="&quot;D. Cover, Summary, Ending&quot;" newline="True"/>
+            <input variable="answer1"/>
+            <if expression="answer1 == &quot;A&quot;">
+                <then>
+                    <output expression="&quot;Correct!&quot;" newline="True"/>
+                    <assign variable="englishPoints" expression="englishPoints + 1"/>
+                </then>
+                <else>
+                    <output expression="&quot;Aww.. Sorry that's incorrect! The right answer was A.&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Which are these are sentences with a metaphor?&quot;" newline="True"/>
+            <output expression="&quot;A. Her eyes shone like stars.&quot;" newline="True"/>
+            <output expression="&quot;B. The cat slept on the mat.&quot;" newline="True"/>
+            <output expression="&quot;C. The classroom was a zoo.&quot;" newline="True"/>
+            <output expression="&quot;D. The rain fell gently&quot;" newline="True"/>
+            <if expression="answer2 == &quot;C&quot;">
+                <then>
+                    <output expression="&quot;Correct!&quot;" newline="True"/>
+                    <assign variable="englishPoints" expression="englishPoints + 1"/>
+                </then>
+                <else>
+                    <output expression="&quot;Aww.. Sorry that's incorrect! The right answer was C.&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;What are conjunctive adverbs?&quot;" newline="True"/>
+            <output expression="&quot;A. Words that describe nouns&quot;" newline="True"/>
+            <output expression="&quot;B. Words that connect two independent clauses&quot;" newline="True"/>
+            <output expression="&quot;C. Words that show emotion&quot;" newline="True"/>
+            <output expression="&quot;D. Words that replace nouns&quot;" newline="True"/>
+            <if expression="answer3 == &quot;B&quot;">
+                <then>
+                    <output expression="&quot;Correct!&quot;" newline="True"/>
+                    <assign variable="englishPoints" expression="englishPoints + 1"/>
+                </then>
+                <else>
+                    <output expression="&quot;Aww.. Sorry that's incorrect! The right answer was B.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="leaderboard" type="None" variable="">
+        <parameters>
+            <parameter name="bestSubject" type="String" array="False"/>
+            <parameter name="secondBestSubject" type="String" array="False"/>
+            <parameter name="worstSubject" type="String" array="False"/>
+            <parameter name="worstScore" type="Integer" array="False"/>
+            <parameter name="secondBestScore" type="Integer" array="False"/>
+            <parameter name="bestScore" type="Integer" array="False"/>
+            <parameter name="leaderboardOption" type="String" array="False"/>
+            <parameter name="tiedBestSubject" type="String" array="False"/>
+            <parameter name="tiedBestScore" type="Integer" array="False"/>
+            <parameter name="tiedWorstSubject" type="String" array="False"/>
+            <parameter name="tiedWorstScore" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <while expression="leaderboardOption == &quot;Done&quot;">
+                <if expression="leaderboardOption == &quot;Yes&quot;">
+                    <then>
+                        <output expression="&quot;Here are the placement &amp; scores of each subject:&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="leaderboardOption == &quot;No&quot;">
+                            <then>
+                                <output expression="&quot;Hm.. Well that's alright I guess..&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;I think you spelt it wrong! Make sure you use the right format!! (Uppercase 1st Letter and lowercase for others; 'Yes' or 'No')&quot;" newline="True"/>
+                            </else>
+                        </if>
+                        <output expression="&quot;Oh.. Well that's alright.&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="mathQuiz" type="Integer" variable="mathScore">
+        <parameters/>
+        <body>
+            <declare name="mathScore" type="Integer" array="False" size=""/>
+            <assign variable="mathScore" expression="0"/>
+            <output expression="&quot;1. What are radical expressions? (C)&quot;" newline="True"/>
+            <output expression="&quot;A. An equation with only whole numbers.&quot;" newline="True"/>
+            <output expression="&quot;B. A fraction with a square root as a denominator&quot;" newline="True"/>
+            <output expression="&quot;C. An expression that includes a root symbol (&#8730;)&quot;" newline="True"/>
+            <output expression="&quot;D. A number raised to a power&quot;" newline="True"/>
+            <input variable="answer1"/>
+            <if expression="answer1 == &quot;C&quot;">
+                <then>
+                    <output expression="&quot;Correct!&quot;" newline="True"/>
+                    <assign variable="mathPoints" expression="mathPoints + 1"/>
+                </then>
+                <else>
+                    <output expression="&quot;Aww.. Sorry that's incorrect! The right answer was B.&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;2. Simplify cube root of 125&quot;" newline="True"/>
+            <output expression="&quot;A. 125&quot;" newline="True"/>
+            <output expression="&quot;B. 5&quot;" newline="True"/>
+            <output expression="&quot;C. 25&quot;" newline="True"/>
+            <output expression="&quot;D. 15,625&quot;" newline="True"/>
+            <input variable="answer2"/>
+            <if expression="answer2 == &quot;B&quot;">
+                <then>
+                    <output expression="&quot;Correct!&quot;" newline="True"/>
+                    <assign variable="mathPoints" expression="mathPoints + 1"/>
+                </then>
+                <else>
+                    <output expression="&quot;Aww.. Sorry that's incorrect! The right answer was B.&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;3. Rationalize 2 / 2 sqrt(3).&quot;" newline="True"/>
+            <output expression="&quot;A. 2&#8730;3 / 3&quot;" newline="True"/>
+            <output expression="&quot;B. &#8730;3 / 3&quot;" newline="True"/>
+            <output expression="&quot;C. 3 / &#8730;2&quot;" newline="True"/>
+            <output expression="&quot;D. 2 / 3&#8730;3&quot;" newline="True"/>
+            <input variable="answer3"/>
+            <if expression="answer3 == &quot;B&quot;">
+                <then>
+                    <output expression="&quot;Correct!&quot;" newline="True"/>
+                    <assign variable="mathPoints" expression="mathPoints + 1"/>
+                </then>
+                <else>
+                    <output expression="&quot;Aww.. Sorry that's incorrect! The right answer was B.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="scienceQuiz" type="Integer" variable="sciencePoints">
+        <parameters/>
+        <body>
+            <declare name="sciencePoints" type="Integer" array="False" size=""/>
+            <declare name="sciQuizIteration" type="Boolean" array="False" size=""/>
+            <declare name="answer" type="String" array="False" size=""/>
+            <assign variable="sciencePoints" expression="0"/>
+            <assign variable="sciQuizIteration" expression="True"/>
+            <output expression="&quot;Ouhh, Science.. a fun one!!... Goodluck!&quot;" newline="True"/>
+            <output expression="&quot;~~~Make sure to answer with only the CAPITAL letters!!~~~&quot;" newline="True"/>
+            <output expression="&quot;First Question for Physics. What happen's to an object's motion when  a balanced force acts on it??:&quot;" newline="True"/>
+            <output expression="&quot;A. It slows down, B. It keeps moving the same way, C. It speeds up and D. It changes direction.&quot;" newline="True"/>
+            <input variable="answer"/>
+            <if expression="answer == &quot;B&quot;">
+                <then>
+                    <output expression="&quot;Correct! It just keeps moving the same way.&quot;" newline="True"/>
+                    <assign variable="sciencePoints" expression="sciencePoints + 1"/>
+                </then>
+                <else>
+                    <output expression="&quot;Owh.. Sorry! The correct answer was: B. It keeps moving the same way&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Second question - ES. What was the magnitude of the earthquake that hit La Union last October 9, 2025??&quot;" newline="True"/>
+            <output expression="&quot;A. 6.7, B. 4.8, C. 1.8 or D. 4.4?&quot;" newline="True"/>
+            <input variable="answer"/>
+            <if expression="answer == &quot;D&quot;">
+                <then>
+                    <output expression="&quot;Correct! The earthquake hit pugo, LU and even reached our school, PSHS-CARC.&quot;" newline="True"/>
+                    <assign variable="sciencePoints" expression="sciencePoints + 1"/>
+                </then>
+                <else>
+                    <output expression="&quot;Oh.. Guess you didn't read about the earthquake that literally hapenned earlier..&quot;" newline="True"/>
+                    <output expression="&quot;(I DIDN'T GET TO FINISH MY MATH EXAMMMMMMMMMMMMMMM AUGHH)&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;And for the third point we have Bio! What part of the cell controls its activities?&quot;" newline="True"/>
+            <output expression="&quot;A. Nucleus, B. Cell membrane, C. Cell Wall, or D. Cytoplasm?&quot;" newline="True"/>
+            <input variable="answer"/>
+            <if expression="answer == &quot;B&quot;">
+                <then>
+                    <output expression="&quot;Correct! It controls the cell's activities and functions.&quot;" newline="True"/>
+                    <assign variable="sciencePoints" expression="sciencePoints + 1"/>
+                </then>
+                <else>
+                    <output expression="&quot;Oop.. That's alright! I also don't know, I searched it up..&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
