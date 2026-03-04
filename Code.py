@@ -1,7 +1,6 @@
 def englishQuiz():
     english_score = 0
 
-
     print("--- English Category ---")
 
     answer = input("Q1: What are at least 3 elements of a short story? ")
@@ -12,7 +11,6 @@ def englishQuiz():
         print(f"Correct! You currently have {english_score}.")
     else:
         print(f"Incorrect! The right answer was {answer} You currently have {english_score}.")
-
 
     return english_score
 
