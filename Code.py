@@ -13,8 +13,7 @@ def englishQuiz():
         print(f"Incorrect! The right answer was {answer} You currently have {english_score}.")
 
     return english_score
-
-
+#hello
 
 
 
