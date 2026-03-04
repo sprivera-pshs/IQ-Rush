@@ -13,10 +13,6 @@ def englishQuiz():
         print(f"Incorrect! The right answer was {answer} You currently have {english_score}.")
 
     return english_score
-#hello
-
-
-
 
 def mathQuiz():
 
@@ -35,23 +31,14 @@ def mathQuiz():
 
     return math_score
 
-
-
-
-
-
 def scienceQuiz():
-
 
     science_score = 0
 
-
     print("--- Math Category ---")
-
 
     answer = input("Q1: What part of the cell controls its activities?")
     correct_answer = "C"
-
 
     if answer == correct_answer:
         science_score = science_score + 1
@@ -59,9 +46,7 @@ def scienceQuiz():
     else:
         print(f"Incorrect! The right answer was {answer} You currently have {science_score}.")
 
-
     return science_score
-
 
 gameIteration = False
 while gameIteration == False:
@@ -72,9 +57,6 @@ while gameIteration == False:
    print("3: Science")
    print("4: Done (Finish Game)")
    select = int(input("Please input your choice: "))
-
-
-
 
    if select == 0:
         print("--- HOW TO PLAY ---")
@@ -87,21 +69,17 @@ while gameIteration == False:
         print("Math: Radicals and square roots.")
         print("Science: Physics, Earth Science.")
 
-
    elif select == 1 and engDone == False:
         engScore = englishQuiz()
         engDone = True
-
 
    elif select == 2 and mathDone == False:
         mathScore = mathQuiz()
         mathDone = True
 
-
    elif select == 3 and sciDone == False:
         sciScore = scienceQuiz()
         sciDone = True
-
 
    elif select == 4:
         if engDone and mathDone and sciDone:
