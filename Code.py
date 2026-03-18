@@ -92,7 +92,7 @@ while gameIteration == False:
         print("\n--- ABOUT THE SUBJECTS ---")
         print("English: Story elements and metaphors.")
         print("Math: Radicals and square roots.")
-        print("Science: Physics, Earth Science.")
+        print("Science: Physics, Earth Science, Biology.")
         print()
 
    elif select == 1 and engDone == False:
