@@ -124,3 +124,50 @@ while gameIteration == False:
            print("ACCESS DENIED: You must complete all subjects first!")
    else:
        print("ERROR: Subject already completed or invalid input.")
+
+# question ideas
+    # ENGLISH
+       1.
+       2.
+       3.
+       4.
+       5.
+       6.
+       7.
+       8.
+       9.
+       10.
+    # MATH
+       1.
+       2.
+       3.
+       4.
+       5.
+       6.
+       7.
+       8.
+       9.
+       10.
+    # SCIENCE
+       # BIO
+            1. "What organelle is responsible for producing energy in a cell?"
+            2. "Which statement correctly differentiates obligate anaerobes and facultative anaerobes?"
+            3. "Which of the following best describes the function of smooth endoplasmic reticulum"
+       # ES
+            1. "Which seismic waves cause the most surface destruction during an earthquake?"
+            2. "How does the Coriolis effect influence wind patterns in the Northern Hemisphere?"
+       # P6
+            1. ""
+            2. ""
+       # CHEM
+            1. "Which of the following intermolecular forces is the strongest?"
+                a. London dispersion forces
+                b. Dipole-dipole interactions
+                c. Hydrogen bonding
+                d. Ion-induced dipole forces
+            2. "Using VSEPR theory, what is the molecular geometry of SF4"
+                a. Tetrahedral
+                b. Trigonal pyramidal
+                c. See-saw
+                d. Square planar
+            3. ""
