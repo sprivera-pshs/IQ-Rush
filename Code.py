@@ -151,11 +151,39 @@ while gameIteration == False:
     # SCIENCE
        # BIO
             1. "What organelle is responsible for producing energy in a cell?"
-            2. "Which statement correctly differentiates obligate anaerobes and facultative anaerobes?"
-            3. "Which of the following best describes the function of smooth endoplasmic reticulum"
+                a. Mitochondira
+                b. Vacuole
+                c. Ribosomes
+                d. Golgi apparatus
+           answer: a
+            2. "Which of these statements correctly differentiates obligate anaerobes and facultative anaerobes?"
+                "I. Obligate anaerobes cannot live in oxygen but facultative anaerobes can.
+                II. Both groups perform aerobic respiration when O2 is present.
+                III. Facultative anaerobes rely on fermentation even in the presence of O2.
+                IV. Obligate anaerobes lack ROS-detoxifying enzymes but facultative anaerobes have them."
+                a. I and IV
+                b. II and IV
+                c. I and II
+                d. III and IV
+            answer: a
+            3. "Which of the following BEST describes the function of smooth endoplasmic reticulum"
+                a. The smooth endoplasmic reticulum detoxifes harmful substances in cells.
+                b. The smooth endoplasmic reticulum produces lipids and steroid hormones.
+                c. The smooth endoplasmic reticulum stores and releases calcium ions.
+                d. The smooth endoplasmic reticulum is studded with ribosomes for protein synthesis.
+            answer: b
        # ES
             1. "Which seismic waves cause the most surface destruction during an earthquake?"
+                a. P-waves produce rolling motion along the ground surface during an earthquake.
+                b. Rayleigh waves only move thrpugh the deepest parts of the Earth duuring an earthquake.
+                c. Surface waves cause the strongest ground movement during an earthquake.
+                d. Love waves travel fastest thru the Earth's interior during an earthquake.
+            answer: c
             2. "How does the Coriolis effect influence wind patterns in the Northern Hemisphere?"
+                a.
+                b.
+                c.
+                d.
        # P6
             1. ""
             2. ""
