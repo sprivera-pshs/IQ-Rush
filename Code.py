@@ -127,27 +127,127 @@ while gameIteration == False:
 
 # question ideas
     # ENGLISH
-       1.
-       2.
-       3.
-       4.
-       5.
-       6.
-       7.
-       8.
-       9.
-       10.
+       1. "Which sentence is correctly written?"
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       2. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       3. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       4. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       5. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       6. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       7. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       8. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       9. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       10. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
     # MATH
-       1.
-       2.
-       3.
-       4.
-       5.
-       6.
-       7.
-       8.
-       9.
-       10.
+       1. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       2. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       3. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       4. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       5. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       6. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       7. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       8. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
+       9. ""
+            a.
+            b.
+            c.
+            d.
+            answer: 
+       10. ""
+            a.
+            b.
+            c.
+            d.
+           answer: 
     # SCIENCE
        # BIO
             1. "What organelle is responsible for producing energy in a cell?"
@@ -180,10 +280,11 @@ while gameIteration == False:
                 d. Love waves travel fastest thru the Earth's interior during an earthquake.
             answer: c
             2. "How does the Coriolis effect influence wind patterns in the Northern Hemisphere?"
-                a.
-                b.
-                c.
-                d.
+                a. 
+                b. 
+                c. It deflects the path of the winds to the right
+                d. 
+            answer: c
        # P6
             1. ""
             2. ""
@@ -193,9 +294,16 @@ while gameIteration == False:
                 b. Dipole-dipole interactions
                 c. Hydrogen bonding
                 d. Ion-induced dipole forces
+            answer: d
             2. "Using VSEPR theory, what is the molecular geometry of SF4"
                 a. Tetrahedral
                 b. Trigonal pyramidal
                 c. See-saw
                 d. Square planar
-            3. ""
+            answer: a
+            3. "What is the half-life of a 100g radioactive sample if only 12.5g remains after 30 days?"
+                a. 5 days
+                b. 10 days
+                c. 15 days
+                d. 20 days
+            answer: b
