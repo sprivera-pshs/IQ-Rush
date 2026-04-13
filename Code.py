@@ -128,65 +128,65 @@ while gameIteration == False:
 # question ideas
     # ENGLISH
        1. "Which sentence is correctly written?"
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       2. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       3. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       4. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       5. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       6. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       7. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       8. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
+            a. Why he didn't go to the library yesterday?
+            b. Why did'nt he go to the library yesterday?
+            c. Why didn't he go to the library yesterday?
+            d. Why didn't he went to the library yesterday?
+           answer: b
+       2. "Which sentence avoids a dangling modifier?"
+            a. Having finished the lab report, the laptop was finally closed.
+            b. While peering through the microscope, the cells were clearly visible.
+            c. After reading the research paper, the student finally understood the hypothesis.
+            d. To improve your grades, the textbook must be read daily.
+           answer: c
+       3. "Which sentence correctly uses the subjunctive mood to express a wish or hypothetical?"
+            a. I wish I was able to attend the conference last Friday.
+            b. If the experiment were to fail, we would need to restart the data collection.
+            c. It is essential that he arrives before the bell rings
+            d. The teacher requested that every student is on time.
+           answer: b
+       4. "Which sentence uses 'whom' correctly in an objective case?"
+            a. Whom do you think will win the science fair?
+            b. I don't care whom is going to the gala.
+            c. The student whom wrote the winning essay is in my class.
+            d. For whom was the scholarship fund established?
+           answer: d
+       5. "Which sentence is an example of a Strawman fallacy?"
+            a. Either study for ten hours or prepare to fail the exam.
+            b. If we miss one deadline, we will all fail the entire year.
+            c. You want less homework? You clearly want us to be uneducated.
+            d. Don't listen to his stories; he's a known liar.
+           answer: c
+       6. "Which sentence is an example of a Ad Hominem fallacy?"
+            a. The plane is bad because it will cost too much money.
+            b. We should reject his essay because he is a lazy student.
+            c. If you eat one candy, you will lose all of your teeth.
+            d. Why talk about grades when the gym is in such a bad shape?
+           answer: b
+       7. "Which sentence is an example of a Slippery Slope Fallacy?"
+            a. Do you want to go to the park or stay home and rot?
+            b. If we let him in late, soon thw whole city will be in chaos.
+            c. You don't like the food? You must want us all to starve.
+            d. He is a bad person, so his advice on health is wrong.
+           answer: b
+       8. "Which sentence uses the word 'its' or 'it's' correctly?"
+            a. The cat licked it's paw after eating the bowl of fish.
+            b. I think its going to be a very long day in the laboratory.
+            c. The robot moved its arm to pick uo the small metal bolt.
+            d. 
+           answer: c
        9. ""
             a.
             b.
             c.
             d.
-           answer: 
+           answer: a
        10. ""
             a.
             b.
             c.
             d.
-           answer: 
+           answer: d
     # MATH
        1. ""
             a.
@@ -280,10 +280,10 @@ while gameIteration == False:
                 d. Love waves travel fastest thru the Earth's interior during an earthquake.
             answer: c
             2. "How does the Coriolis effect influence wind patterns in the Northern Hemisphere?"
-                a. 
-                b. 
+                a. It increases the speed of the winds near the equator
+                b. It deflects the path of the winds to the left
                 c. It deflects the path of the winds to the right
-                d. 
+                d. It causes the winds to move in a vertical line
             answer: c
        # P6
             1. ""
