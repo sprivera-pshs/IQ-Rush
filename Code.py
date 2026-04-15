@@ -286,8 +286,14 @@ while gameIteration == False:
                 d. It causes the winds to move in a vertical line
             answer: c
        # P6
-            1. ""
+            1. "Who is the father of electricity?"
+                a. Michael Faraday
+                b. Thomas Edison
+                c. Nikola Tesla
+                d. Benjamin Franklin
+            answer: a
             2. ""
+            answer: a
        # CHEM
             1. "Which of the following intermolecular forces is the strongest?"
                 a. London dispersion forces
