@@ -175,25 +175,25 @@ while gameIteration == False:
             c. The robot moved its arm to pick uo the small metal bolt.
             d. 
            answer: c
-       9. ""
-            a.
-            b.
-            c.
-            d.
+       9. "Which sentence sounds the most grammatically correct?"
+            a. 
+            b. 
+            c. 
+            d. 
            answer: a
-       10. ""
-            a.
-            b.
-            c.
-            d.
+       10. "Which of these is an example of a rhetorical question?"
+            a. 
+            b. 
+            c. 
+            d. Answer: Who Wouldn't Want to be a Millionaire?
            answer: d
     # MATH
-       1. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
+       1. "Which of the following is the correct answer of y = 4x^2 + 12x + 9."
+            a. x = 3/-2
+            b. x = -3/2
+            c. x = -2/3
+            d. x = 2/-3
+           answer: b
        2. ""
             a.
             b.
@@ -292,8 +292,12 @@ while gameIteration == False:
                 c. Nikola Tesla
                 d. Benjamin Franklin
             answer: a
-            2. ""
-            answer: a
+            2. "Coulomb’s Law states that the force between two point charges is:"
+                a. Directly proportional to the product of their masses
+                b. Inversely proportional to the distance between them
+                c. Inversely proportional to the square of the distance between them
+                d. Directly proportional to the distance between them
+            answer: c
        # CHEM
             1. "Which of the following intermolecular forces is the strongest?"
                 a. London dispersion forces
