@@ -175,17 +175,17 @@ while gameIteration == False:
             c. The robot moved its arm to pick uo the small metal bolt.
             d. 
            answer: c
-       9. "Which sentence sounds the most grammatically correct?"
-            a. 
-            b. 
-            c. 
-            d. 
+       9. "Which sentence sounds the grammatically correct?"
+            a. The group of students is going to the library.
+            b. The group of students are going to the library.
+            c. The group of students be going to the library.
+            d. The group of students going to the library.
            answer: a
        10. "Which of these is an example of a rhetorical question?"
-            a. 
-            b. 
-            c. 
-            d. Answer: Who Wouldn't Want to be a Millionaire?
+            a. What is the capital of France?
+            b. How do you solve for x in this equation?
+            c. Did you eat breakfast today?
+            d. Who Wouldn't Want to be a Millionaire?
            answer: d
     # MATH
        1. "Which of the following is the correct answer of y = 4x^2 + 12x + 9."
@@ -194,60 +194,60 @@ while gameIteration == False:
             c. x = -2/3
             d. x = 2/-3
            answer: b
-       2. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       3. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       4. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       5. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       6. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       7. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       8. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
-       9. ""
-            a.
-            b.
-            c.
-            d.
-            answer: 
-       10. ""
-            a.
-            b.
-            c.
-            d.
-           answer: 
+       2. "What is the discriminant of the quadratic equation x^2 - 4x + 4 = 0?"
+            a. 0
+            b. 16
+            c. 32
+            d. -16
+           answer: a
+       3. "Solve x^2 + 6x = 7 by completing the square. What is the value of x?"
+            a. x = 1, x = 7
+            b. x = 1, x = -7
+            c. x = -1, x = 7
+            d. x = -1, x = -7
+           answer: b
+       4. "What is the discriminant of the quadratic equation x^2 - 4x + 4 = 0?"
+            a. 0
+            b. 16
+            c. 32
+            d. -16
+           answer: a
+       5. "Which of these is the first step when using the AC method to factor 2x^2 + 7x + 3?"
+            a. Multiply 2 and 3.
+            b. Divide 7 by 2.
+            c. Square the number 3.
+            d. Add 2 and 3.
+           answer: a
+       6. "Which of the following correctly describes the discriminant b^2 - 4ac in the quadratic formula?"
+            a. It determines the y-intercept of the parabola.
+            b. It is the value that is always multiplied by the variable x.
+            c. It is used to find the vertex of the quadratic function.
+            d. It tells you the number and type of roots the equation has.
+       answer: d
+       7. "What is the primary purpose of using the AC method for a quadratic trinomial ax^2 + bx + c?"
+            a. To set the equation equal to zero.
+            b. To identify the values of the discriminant.
+            c. To factor the expression by splitting the middle term.
+            d. To find the axis of symmetry.
+           answer: c
+       8. "For a quadratic equation ax^2 + bx + c = 0 with a ≠ 0, what is the sum of the roots based on the coefficients?"
+            a. -b/a
+            b. c/a
+            c. -c/a
+            d. b/a
+           answer: a
+       9. "In the quadratic formula, what does the term $-b/2a$ represent geometrically?"
+            a. The y-intercept of the parabola.
+            b. The x-coordinate of the vertex (axis of symmetry).
+            c. The discriminant.
+            d. The focal length.
+            answer: b
+       10. "When using the square root property to solve a quadratic equation, which equation format is it best applied to?"
+            a. ax^2 + bx + c = 0
+            b. ax^2 + bx = 0
+            c. ax^2 + c = 0
+            d. x^2 = k
+            answer: d
     # SCIENCE
        # BIO
             1. "What organelle is responsible for producing energy in a cell?"
