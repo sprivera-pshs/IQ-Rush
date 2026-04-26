@@ -1,39 +1,41 @@
+import json
+
+# Specify the filename
+filename = "my_data.json"
+
+with open('my_data.json', 'r') as file:
+    data = json.load(file)
+
 # English quiz function
 def englishQuiz():
     english_score = 0
+    print("\n--- English Category ---")
 
-    print("--- English Category ---")
+    for item in data["engQuestions"]:
+        question_text = list(item.values())[0]
+        print(question_text)
+        answer = input("Input your answer here: ").upper()
+        correct_answer = item["choice"]
 
-    print("\nWhat are at least 3 elements of a short story?")
-    print("A. Plot, Conflict, Rising Action")
-    print("B. Plot, Cosmopolitan, Rising Action")
-    print("C. Marvel, Conflict, Rising Action")
-    print("D. Plot, Caipirinha, Rhubarb")
-    answer = input("Input your answer here (capital): ")
-    correct_answer = "A"
-
-    if answer == correct_answer:
-        english_score += 1
-        print(f"Correct! You currently have {english_score} point.")
-    else:
-        print(f"Incorrect! The right answer was {answer} You currently have {english_score}.")
+        if answer == correct_answer:
+            english_score += 1
+            print(f"Correct! You currently have {english_score} point.")
+        else:
+            print(f"Incorrect! The right answer was {answer} You currently have {english_score}.")
+        print("")
 
     return english_score
 
 # Math quiz function
 def mathQuiz():
-
     math_score = 0
-
     print("--- Math Category ---")
 
-    print("\nQ1. Simplify cube root of 125. ")
-    print("A. 6")
-    print("B. 5")
-    print("C. 7")
-    print("D. 5.4")
-    answer = input("Input your answer here (capital): ")
-    correct_answer = "B"
+    for item in data["mathQuestions"]:
+        question_text = list(item.values())[0]
+        print(question_text)
+        answer = input("Input your answer here: ").upper()
+        correct_answer = item["choice"]
 
     if answer == correct_answer:
         math_score = math_score + 1
@@ -45,24 +47,22 @@ def mathQuiz():
 
 # Science quiz function
 def scienceQuiz():
-
     science_score = 0
-
     print("--- Science Category ---")
 
-    print("\nQ1: What part of the cell controls its activities? ")
-    print("A. Cytoplasm")
-    print("B. Mitochondria")
-    print("C. Nucleus")
-    print("D. Ribosome")
-    answer = input("Input your answer here (capital): ")
-    correct_answer = "C"
+    for item in data["sciQuestions"]:
+        question_text = list(item.values())[0]
+        print(question_text)
+        answer = input("Input your answer here: ").upper()
+        correct_answer = item["choice"]
 
     if answer == correct_answer:
         science_score = science_score + 1
         print(f"Correct! You currently have {science_score} point.")
     else:
         print(f"Incorrect! The right answer was {answer} You currently have {science_score}.")
+
+    print(f"\nNice one! You got {science_score}! ")
 
     return science_score
 
@@ -73,9 +73,10 @@ engDone = False
 mathDone = False
 sciDone = False
 player_name = input("Please enter your name: ")
+print(f"\nHi, {player_name}! Welcome to IQ Rush!")
 
 while gameIteration == False:
-   print("--- IQ RUSH HUB ---")
+   print("\n--- IQ RUSH HUB ---")
    print("0: How to Play & About Subjects")
    print("1: English")
    print("2: Math")
@@ -123,197 +124,8 @@ while gameIteration == False:
         else:
            print("ACCESS DENIED: You must complete all subjects first!")
    else:
-       print("ERROR: Subject already completed or invalid input.")
-
-# question ideas
-    # ENGLISH
-       1. "Which sentence is correctly written?"
-            a. Why he didn't go to the library yesterday?
-            b. Why did'nt he go to the library yesterday?
-            c. Why didn't he go to the library yesterday?
-            d. Why didn't he went to the library yesterday?
-           answer: b
-       2. "Which sentence avoids a dangling modifier?"
-            a. Having finished the lab report, the laptop was finally closed.
-            b. While peering through the microscope, the cells were clearly visible.
-            c. After reading the research paper, the student finally understood the hypothesis.
-            d. To improve your grades, the textbook must be read daily.
-           answer: c
-       3. "Which sentence correctly uses the subjunctive mood to express a wish or hypothetical?"
-            a. I wish I was able to attend the conference last Friday.
-            b. If the experiment were to fail, we would need to restart the data collection.
-            c. It is essential that he arrives before the bell rings
-            d. The teacher requested that every student is on time.
-           answer: b
-       4. "Which sentence uses 'whom' correctly in an objective case?"
-            a. Whom do you think will win the science fair?
-            b. I don't care whom is going to the gala.
-            c. The student whom wrote the winning essay is in my class.
-            d. For whom was the scholarship fund established?
-           answer: d
-       5. "Which sentence is an example of a Strawman fallacy?"
-            a. Either study for ten hours or prepare to fail the exam.
-            b. If we miss one deadline, we will all fail the entire year.
-            c. You want less homework? You clearly want us to be uneducated.
-            d. Don't listen to his stories; he's a known liar.
-           answer: c
-       6. "Which sentence is an example of a Ad Hominem fallacy?"
-            a. The plane is bad because it will cost too much money.
-            b. We should reject his essay because he is a lazy student.
-            c. If you eat one candy, you will lose all of your teeth.
-            d. Why talk about grades when the gym is in such a bad shape?
-           answer: b
-       7. "Which sentence is an example of a Slippery Slope Fallacy?"
-            a. Do you want to go to the park or stay home and rot?
-            b. If we let him in late, soon thw whole city will be in chaos.
-            c. You don't like the food? You must want us all to starve.
-            d. He is a bad person, so his advice on health is wrong.
-           answer: b
-       8. "Which sentence uses the word 'its' or 'it's' correctly?"
-            a. The cat licked it's paw after eating the bowl of fish.
-            b. I think its going to be a very long day in the laboratory.
-            c. The robot moved its arm to pick uo the small metal bolt.
-            d. 
-           answer: c
-       9. "Which sentence sounds the grammatically correct?"
-            a. The group of students is going to the library.
-            b. The group of students are going to the library.
-            c. The group of students be going to the library.
-            d. The group of students going to the library.
-           answer: a
-       10. "Which of these is an example of a rhetorical question?"
-            a. What is the capital of France?
-            b. How do you solve for x in this equation?
-            c. Did you eat breakfast today?
-            d. Who Wouldn't Want to be a Millionaire?
-           answer: d
-    # MATH
-       1. "Which of the following is the correct answer of y = 4x^2 + 12x + 9."
-            a. x = 3/-2
-            b. x = -3/2
-            c. x = -2/3
-            d. x = 2/-3
-           answer: b
-       2. "What is the discriminant of the quadratic equation x^2 - 4x + 4 = 0?"
-            a. 0
-            b. 16
-            c. 32
-            d. -16
-           answer: a
-       3. "Solve x^2 + 6x = 7 by completing the square. What is the value of x?"
-            a. x = 1, x = 7
-            b. x = 1, x = -7
-            c. x = -1, x = 7
-            d. x = -1, x = -7
-           answer: b
-       4. "What is the discriminant of the quadratic equation x^2 - 4x + 4 = 0?"
-            a. 0
-            b. 16
-            c. 32
-            d. -16
-           answer: a
-       5. "Which of these is the first step when using the AC method to factor 2x^2 + 7x + 3?"
-            a. Multiply 2 and 3.
-            b. Divide 7 by 2.
-            c. Square the number 3.
-            d. Add 2 and 3.
-           answer: a
-       6. "Which of the following correctly describes the discriminant b^2 - 4ac in the quadratic formula?"
-            a. It determines the y-intercept of the parabola.
-            b. It is the value that is always multiplied by the variable x.
-            c. It is used to find the vertex of the quadratic function.
-            d. It tells you the number and type of roots the equation has.
-       answer: d
-       7. "What is the primary purpose of using the AC method for a quadratic trinomial ax^2 + bx + c?"
-            a. To set the equation equal to zero.
-            b. To identify the values of the discriminant.
-            c. To factor the expression by splitting the middle term.
-            d. To find the axis of symmetry.
-           answer: c
-       8. "For a quadratic equation ax^2 + bx + c = 0 with a ≠ 0, what is the sum of the roots based on the coefficients?"
-            a. -b/a
-            b. c/a
-            c. -c/a
-            d. b/a
-           answer: a
-       9. "In the quadratic formula, what does the term $-b/2a$ represent geometrically?"
-            a. The y-intercept of the parabola.
-            b. The x-coordinate of the vertex (axis of symmetry).
-            c. The discriminant.
-            d. The focal length.
-            answer: b
-       10. "When using the square root property to solve a quadratic equation, which equation format is it best applied to?"
-            a. ax^2 + bx + c = 0
-            b. ax^2 + bx = 0
-            c. ax^2 + c = 0
-            d. x^2 = k
-            answer: d
-    # SCIENCE
-       # BIO
-            1. "What organelle is responsible for producing energy in a cell?"
-                a. Mitochondira
-                b. Vacuole
-                c. Ribosomes
-                d. Golgi apparatus
-           answer: a
-            2. "Which of these statements correctly differentiates obligate anaerobes and facultative anaerobes?"
-                "I. Obligate anaerobes cannot live in oxygen but facultative anaerobes can.
-                II. Both groups perform aerobic respiration when O2 is present.
-                III. Facultative anaerobes rely on fermentation even in the presence of O2.
-                IV. Obligate anaerobes lack ROS-detoxifying enzymes but facultative anaerobes have them."
-                a. I and IV
-                b. II and IV
-                c. I and II
-                d. III and IV
-            answer: a
-            3. "Which of the following BEST describes the function of smooth endoplasmic reticulum"
-                a. The smooth endoplasmic reticulum detoxifes harmful substances in cells.
-                b. The smooth endoplasmic reticulum produces lipids and steroid hormones.
-                c. The smooth endoplasmic reticulum stores and releases calcium ions.
-                d. The smooth endoplasmic reticulum is studded with ribosomes for protein synthesis.
-            answer: b
-       # ES
-            1. "Which seismic waves cause the most surface destruction during an earthquake?"
-                a. P-waves produce rolling motion along the ground surface during an earthquake.
-                b. Rayleigh waves only move thrpugh the deepest parts of the Earth duuring an earthquake.
-                c. Surface waves cause the strongest ground movement during an earthquake.
-                d. Love waves travel fastest thru the Earth's interior during an earthquake.
-            answer: c
-            2. "How does the Coriolis effect influence wind patterns in the Northern Hemisphere?"
-                a. It increases the speed of the winds near the equator
-                b. It deflects the path of the winds to the left
-                c. It deflects the path of the winds to the right
-                d. It causes the winds to move in a vertical line
-            answer: c
-       # P6
-            1. "Who is the father of electricity?"
-                a. Michael Faraday
-                b. Thomas Edison
-                c. Nikola Tesla
-                d. Benjamin Franklin
-            answer: a
-            2. "Coulomb’s Law states that the force between two point charges is:"
-                a. Directly proportional to the product of their masses
-                b. Inversely proportional to the distance between them
-                c. Inversely proportional to the square of the distance between them
-                d. Directly proportional to the distance between them
-            answer: c
-       # CHEM
-            1. "Which of the following intermolecular forces is the strongest?"
-                a. London dispersion forces
-                b. Dipole-dipole interactions
-                c. Hydrogen bonding
-                d. Ion-induced dipole forces
-            answer: d
-            2. "Using VSEPR theory, what is the molecular geometry of SF4"
-                a. Tetrahedral
-                b. Trigonal pyramidal
-                c. See-saw
-                d. Square planar
-            answer: a
-            3. "What is the half-life of a 100g radioactive sample if only 12.5g remains after 30 days?"
-                a. 5 days
-                b. 10 days
-                c. 15 days
-                d. 20 days
-            answer: b
+       print("")
+       print("-" * 50)
+       print("\nERROR: Subject already completed or invalid input.")
+       print("")
+       print("-" * 50)
